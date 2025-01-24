@@ -37,6 +37,8 @@
 </head>
 <body>
     <h1>퀴즈 정답 추출기</h1>
+    <button id="refresh-page">새로 고침</button> <!-- 새로 고침 버튼 추가 -->
+    
     <div class="tabs">
         <div class="tab active" data-tab="tab1">돈버는 퀴즈</div>
         <div class="tab" data-tab="tab2">타임스프레드 퀴즈</div>
@@ -49,6 +51,11 @@
     </div>
 
     <script>
+        // 새로 고침 버튼 이벤트 리스너
+        document.getElementById("refresh-page").addEventListener("click", () => {
+            location.reload(); // 페이지 새로 고침
+        });
+        
         // 탭 전환 기능
         const tabs = document.querySelectorAll('.tab');
         const tabContents = document.querySelectorAll('.tab-content');
