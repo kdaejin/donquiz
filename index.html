@@ -93,7 +93,7 @@
             const clientSecret = "ZD6Evpe93B"; // 네이버 API 클라이언트 시크릿
 
             const proxyUrl = "https://donquiz.kdaejin.workers.dev/?url=";
-            const targetUrl = `https://openapi.naver.com/v1/search/news.json?query=${encodeURIComponent(query)}&display=3&sort=date`;
+            const targetUrl = `https://openapi.naver.com/v1/search/news.json?query=${encodeURIComponent(query)}&display=1&start=1&sort=sim`;
             const apiUrl = `${proxyUrl}${encodeURIComponent(targetUrl)}`;
             
             try {
