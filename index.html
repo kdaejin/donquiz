@@ -97,9 +97,7 @@
             const apiUrl = `${proxyUrl}${encodeURIComponent(targetUrl)}`;
             
             try {
-
-                console.log("검색 쿼리:", query);
-                
+               
                 // 네이버 뉴스 검색 API 호출
                 const response = await fetch(apiUrl, {
                     method: 'GET',
@@ -113,13 +111,7 @@
                     throw new Error(`API 요청 실패: ${response.status}`);
                 }
 
-                console.log("API 응답 상태:", response.status);
-
-                const data = await response.json();
-
-                console.log("받은 데이터:", data);
-                console.log("뉴스 아이템 개수:", data.items ? data.items.length : "없음");
-                
+                const data = await response.json();                
                 if (!data.items || data.items.length === 0) {
                     document.getElementById(resultElementId).textContent = "관련 뉴스 기사를 찾을 수 없습니다.";
                     return;
