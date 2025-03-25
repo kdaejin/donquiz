@@ -97,6 +97,9 @@
             const apiUrl = `${proxyUrl}${encodeURIComponent(targetUrl)}`;
             
             try {
+
+                console.log("검색 쿼리:", query);
+                
                 // 네이버 뉴스 검색 API 호출
                 const response = await fetch(apiUrl, {
                     method: 'GET',
